@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class scr_goalDetection : MonoBehaviour {
 
-	bool hasArrived;
+	public bool hasArrived;
+	public bool levelFinished;
 
 	// Use this for initialization
 	void Start () {
 		hasArrived = false;
+		levelFinished = false;
 	}
 	
 	// Update is called once per frame
@@ -17,9 +19,16 @@ public class scr_goalDetection : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider other) {
-		//if (!hasArrived) {
-			//hasArrived = true;
-			print("woof!");
-		//}
+		if (other.tag == "Player") {
+			hasArrived = true;
+			print("arf!");
+		}
+	}
+
+	void OnTriggerLeave(Collider other) {
+		if (other.tag == "Player") {
+			hasArrived = false;
+			print("woof?");
+		}
 	}
 }
