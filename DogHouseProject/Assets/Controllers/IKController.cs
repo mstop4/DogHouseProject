@@ -7,8 +7,9 @@ public class IKController : MonoBehaviour {
     protected Animator animator;
 
     public bool ikActive = false;
-    public Transform rightHandObj = null;
+    public Transform HandObj = null;
     public Transform lookObj = null;
+    public AvatarIKGoal bodyPart;
 
     void Start()
     {
@@ -33,12 +34,12 @@ public class IKController : MonoBehaviour {
                 }
 
                 // Set the right hand target position and rotation, if one has been assigned
-                if (rightHandObj != null)
+                if (HandObj != null)
                 {
                     animator.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
                     animator.SetIKRotationWeight(AvatarIKGoal.RightHand, 1);
-                    animator.SetIKPosition(AvatarIKGoal.RightHand, rightHandObj.position);
-                    animator.SetIKRotation(AvatarIKGoal.RightHand, rightHandObj.rotation);
+                    animator.SetIKPosition(AvatarIKGoal.RightHand, HandObj.position);
+                    animator.SetIKRotation(AvatarIKGoal.RightHand, HandObj.rotation);
                 }
 
                 transform.localPosition = transform.localPosition + Vector3.up * -1;
