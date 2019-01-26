@@ -2,18 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class ScrTitleController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
+    protected ScrLevelManager levelManager;
+
+    // Use this for initialization
+    void Start () {
+        levelManager = GameObject.FindObjectOfType<ScrLevelManager>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown("space")) {
-			SceneManager.LoadScene("Goal");
+            levelManager.NextLevel();
 		}
 	}
 }
