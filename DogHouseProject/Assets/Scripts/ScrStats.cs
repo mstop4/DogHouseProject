@@ -37,11 +37,6 @@ public class ScrStats : MonoBehaviour {
 				time = 0f;
 				SendMessage("TimeOver");
 				print("Master is back!");
-
-				loveText.gameObject.SetActive(true);
-				loveLabel.gameObject.SetActive(true);
-				timerText.gameObject.SetActive(false);
-				timerLabel.gameObject.SetActive(false);
 			}
 			timerText.text = Math.Round(time, 1).ToString();
 		}
@@ -56,5 +51,12 @@ public class ScrStats : MonoBehaviour {
 				loveText.text = Math.Round(love, 1).ToString();
 			}
 		}
+	}
+
+	void TimeOver() {
+		loveText.gameObject.SetActive(true);
+		loveLabel.gameObject.SetActive(true);
+		timerText.gameObject.SetActive(false);
+		timerLabel.gameObject.SetActive(false);
 	}
 }
