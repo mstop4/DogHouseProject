@@ -239,6 +239,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4087276201505728}
   - component: {fileID: 95563214531786490}
+  - component: {fileID: 114288998465794330}
   m_Layer: 0
   m_Name: dog 1
   m_TagString: Untagged
@@ -2175,6 +2176,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   child: {fileID: 4948710087205880}
+--- !u!114 &114288998465794330
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1224624174812534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89cf062daaee94229813f1a2577979be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: {fileID: 0}
 --- !u!114 &114304288681208718
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -14,6 +14,8 @@ public class ScrStats : MonoBehaviour {
 	public Text timerLabel;
 	public Text loveLabel;
 
+	public ScrOwnerAnim ownerScript;
+
 	public GameObject goalObj;
 	
 	private ScrGoalDetection goalScript;
@@ -58,5 +60,7 @@ public class ScrStats : MonoBehaviour {
 		loveLabel.gameObject.SetActive(true);
 		timerText.gameObject.SetActive(false);
 		timerLabel.gameObject.SetActive(false);
+
+		ownerScript.IsBack();
 	}
 }
