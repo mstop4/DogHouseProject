@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Goal.unity
     guid: c911afe1a29e042bea5c9823ddd37d1e
+  - enabled: 1
+    path: Assets/Scenes/Step.unity
+    guid: a504418015bab4423bb6fe44aa8f2dc5
   m_configObjects: {}
