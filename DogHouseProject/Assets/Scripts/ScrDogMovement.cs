@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class scr_dogMovement : MonoBehaviour {
+public class ScrDogMovement : MonoBehaviour {
 
 	private Rigidbody rb;
 	private Camera mainCamera;
 	private const float maxSpeed = 5f;
 
 	public GameObject goalObj;
-	private scr_goalDetection goalScript;
+	private ScrGoalDetection goalScript;
 
 	// Use this for initialization
 	void Start () {
 		rb = GetComponent<Rigidbody>();
 		mainCamera = Camera.main;
-		goalScript = goalObj.GetComponent<scr_goalDetection>();
+		goalScript = goalObj.GetComponent<ScrGoalDetection>();
 	}
 	
 	// Update is called once per frame

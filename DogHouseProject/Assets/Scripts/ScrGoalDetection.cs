@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scr_goalDetection : MonoBehaviour {
+public class ScrGoalDetection : MonoBehaviour {
 
 	public bool hasArrived;
 	public bool levelFinished;
