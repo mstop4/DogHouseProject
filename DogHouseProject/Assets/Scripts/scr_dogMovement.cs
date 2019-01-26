@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class scr_dogMovement : MonoBehaviour {
 
-	bool arrivedAtGoal;
+	Rigidbody rb;
 
 	// Use this for initialization
 	void Start () {
-		arrivedAtGoal = false;
+		rb = GetComponent<Rigidbody>();
 	}
 	
 	// Update is called once per frame
@@ -21,11 +21,8 @@ public class scr_dogMovement : MonoBehaviour {
 		if (Input.GetKey("right")) h_input += 1;
 		if (Input.GetKey("left")) h_input -= 1;
 
-		transform.Translate((Vector3.forward * v_input + Vector3.right * h_input) * Time.deltaTime * 5);
+		rb.velocity = new Vector3(-v_input * 250 * Time.deltaTime, rb.velocity.y, h_input * 250 * Time.deltaTime);
 
-		if (transform.position.x <= -5 && !arrivedAtGoal) {
-			arrivedAtGoal = true;
-			print("Woof!");
-		}
+		//transform.Translate((Vector3.forward * v_input + Vector3.right * h_input) * Time.deltaTime * 5);
 	}
 }
