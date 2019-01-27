@@ -28,6 +28,11 @@ public class ScrLevelManager : MonoBehaviour {
             if(_currentLevel != 0)
                 RestartLevel();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     public void NextLevel()
