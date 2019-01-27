@@ -32,7 +32,7 @@ public class ScrStats : MonoBehaviour {
     // Use this for initialization
     void Start () {
 		timerText.text = time.ToString();
-		loveText.text = "100";
+		loveText.text = "100%";
 		goalScript = goalObj.GetComponent<ScrGoalDetection>();
         levelManager = GameObject.FindObjectOfType<ScrLevelManager>();
 
