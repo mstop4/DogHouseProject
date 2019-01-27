@@ -10,13 +10,9 @@ public class ScrOwnerController : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator>();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-	void IsBack () {
-		anim.isBack = true;
+	public void IsBack () {
+		print("Is back");
+		anim.SetBool("isBack", true);
 	}
 }
