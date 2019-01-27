@@ -54,5 +54,6 @@ MonoBehaviour:
   Levels:
   - Title
   - Goal
+  - Step
   - Narrow
   GameOverLevel: GameOver
