@@ -831,7 +831,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1592439995380332}
   m_LocalRotation: {x: -0, y: 0.7106543, z: -0, w: 0.70354146}
-  m_LocalPosition: {x: -5.997887, y: 2.5, z: 0.025721375}
+  m_LocalPosition: {x: -24, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4013698069642952}
@@ -1509,6 +1509,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5637b389580034c35a8a4680ae3290f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MasterDoneAnim:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!137 &137304236262757764
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

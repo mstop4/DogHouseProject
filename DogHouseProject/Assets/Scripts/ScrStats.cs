@@ -21,6 +21,8 @@ public class ScrStats : MonoBehaviour {
 
 	private ScrGoalDetection goalScript;
 
+    private bool masterDoneAnim;
+
     private bool levelOver;
     protected ScrLevelManager levelManager;
 
@@ -35,6 +37,7 @@ public class ScrStats : MonoBehaviour {
 		loveLabel.gameObject.SetActive(false);
 
         levelOver = false;
+        masterDoneAnim = false;
 	}
 	
 	// Update is called once per frame
@@ -48,7 +51,10 @@ public class ScrStats : MonoBehaviour {
     {
         if (time > 0f)
         {
-            time -= Time.deltaTime;
+            if (goalScript.hasArrived)
+                time -= Time.deltaTime * 5;
+            else
+                time -= Time.deltaTime;
 
             if (time < 0f)
             {
@@ -72,7 +78,7 @@ public class ScrStats : MonoBehaviour {
                     {
                         love = 0f;
                     }
-                    loveText.text = Math.Round(love / 60, 0).ToString() + "%";
+                    loveText.text = Math.Round(love / 60 * 100, 0).ToString() + "%";
                 }
                 else
                 {
@@ -82,8 +88,10 @@ public class ScrStats : MonoBehaviour {
             }
             else
             {
-                if (love > 0f)
+                if (love > 0f && masterDoneAnim)
                 {
+                    print("Goto next level in 2 sec");
+                    levelOver = true;
                     Invoke("GotoNextLevel", 2f);
                 }
             }
@@ -96,9 +104,21 @@ public class ScrStats : MonoBehaviour {
 		loveLabel.gameObject.SetActive(true);
 		timerText.gameObject.SetActive(false);
 		timerLabel.gameObject.SetActive(false);
+        delayMasterDoneAnim(2.5f);
 	}
 
+    public void delayMasterDoneAnim(float time) {
+        print("master is animating");
+        Invoke("setMasterDoneAnim", time);
+    }
+
+    void setMasterDoneAnim () {
+        print("master should be finished animating");
+        masterDoneAnim = true;
+    }
+
     void GotoNextLevel() {
+        print("goto next level now");
         if (levelManager != null)
             levelManager.NextLevel();
     }
