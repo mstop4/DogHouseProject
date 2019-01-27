@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Narrow.unity
     guid: 5ffcc9119a5e64a698dc3c693ff28737
+  - enabled: 1
+    path: Assets/Scenes/Step.unity
+    guid: c54e87fed6beb406eafc354764c90efb
   m_configObjects: {}

@@ -51,8 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34368aaf607eb4f51a63525c0068461a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  time: 5
-  love: 10
+  time: 30
+  love: 60
   timerText: {fileID: 0}
   loveText: {fileID: 0}
   timerLabel: {fileID: 0}
