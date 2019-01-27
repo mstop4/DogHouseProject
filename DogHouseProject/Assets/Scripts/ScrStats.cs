@@ -20,6 +20,8 @@ public class ScrStats : MonoBehaviour {
     public UnityEvent MasterIsHomeEvent;
 
 	private ScrGoalDetection goalScript;
+
+    private bool levelOver;
     protected ScrLevelManager levelManager;
 
     // Use this for initialization
@@ -31,11 +33,15 @@ public class ScrStats : MonoBehaviour {
 
 		loveText.gameObject.SetActive(false);
 		loveLabel.gameObject.SetActive(false);
+
+        levelOver = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        DoTimeManagment();
+        if (!levelOver) {
+            DoTimeManagment();
+        }
 	}
 
     public void DoTimeManagment()
@@ -51,7 +57,7 @@ public class ScrStats : MonoBehaviour {
                 print("Master is back!");
                 MasterIsHomeEvent.Invoke();
             }
-            timerText.text = Math.Round(time, 1).ToString();
+            timerText.text = Math.Round(time, 0).ToString();
         }
 
         else
@@ -66,7 +72,7 @@ public class ScrStats : MonoBehaviour {
                     {
                         love = 0f;
                     }
-                    loveText.text = Math.Round(love, 1).ToString();
+                    loveText.text = Math.Round(love / 60, 0).ToString() + "%";
                 }
                 else
                 {
@@ -78,8 +84,7 @@ public class ScrStats : MonoBehaviour {
             {
                 if (love > 0f)
                 {
-                    if (levelManager != null)
-                        levelManager.NextLevel();
+                    Invoke("GotoNextLevel", 2f);
                 }
             }
 
@@ -92,4 +97,9 @@ public class ScrStats : MonoBehaviour {
 		timerText.gameObject.SetActive(false);
 		timerLabel.gameObject.SetActive(false);
 	}
+
+    void GotoNextLevel() {
+        if (levelManager != null)
+            levelManager.NextLevel();
+    }
 }

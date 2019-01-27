@@ -242,7 +242,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4087276201505728, guid: 589c08375ef694b848c72c1344a1b813, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4474711720225458, guid: 589c08375ef694b848c72c1344a1b813, type: 2}
       propertyPath: m_LocalRotation.x
@@ -710,7 +710,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4243307067574514, guid: 04c598c1d72834421abd8355e3d42dc9, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c598c1d72834421abd8355e3d42dc9, type: 2}
@@ -851,7 +851,7 @@ Transform:
   - {fileID: 257868061}
   - {fileID: 1540902221}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &860156920
 GameObject:
@@ -940,7 +940,7 @@ RectTransform:
   m_Children:
   - {fileID: 539558330}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1073,7 +1073,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4177713139588436, guid: d349d6d76d2e047c9a92a8745cc90cf2, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4177713139588436, guid: d349d6d76d2e047c9a92a8745cc90cf2, type: 2}
       propertyPath: m_LocalScale.x
@@ -1264,7 +1264,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1772893454
 Prefab:
@@ -1308,7 +1308,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4889047978281996, guid: 37349879d3d67a34299d0f89f9c5f8a6, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114375932848754318, guid: 37349879d3d67a34299d0f89f9c5f8a6,
         type: 2}
@@ -1448,5 +1448,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
