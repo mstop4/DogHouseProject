@@ -6,6 +6,7 @@ public class SpringController : MonoBehaviour {
 
     public Transform anchor;
     public float speed = 0.1f;
+    public float limitDistance = 0.7f;
     public KeyCode key;
     protected SpringJoint spring;
     protected float initSpringAmount = 0;
@@ -24,7 +25,7 @@ public class SpringController : MonoBehaviour {
         {
             Vector3 directionToMove = anchor.transform.position - transform.position;
             float distance = Vector3.Distance(transform.position, anchor.transform.position);
-            if (distance > 0.7f)
+            if (distance > limitDistance)
             {
                 transform.position = transform.position + directionToMove * speed * Time.deltaTime;
             }
