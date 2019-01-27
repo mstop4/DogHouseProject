@@ -9,7 +9,8 @@ public class ScrStats : MonoBehaviour {
 
 	public float time;
 	public float love;
-	public Text timerText;
+    public float LoveDecreaseDelta = 1;
+    public Text timerText;
 	public Text loveText;
 
 	public Text timerLabel;
@@ -75,7 +76,7 @@ public class ScrStats : MonoBehaviour {
             {
                 if (love > 0f)
                 {
-                    love -= Time.deltaTime;
+                    love -= Time.deltaTime*LoveDecreaseDelta;
 
                     if (love < 0f)
                     {
