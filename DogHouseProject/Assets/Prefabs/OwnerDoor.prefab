@@ -1767,6 +1767,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5637b389580034c35a8a4680ae3290f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MasterDoneAnim:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!137 &137304236262757764
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

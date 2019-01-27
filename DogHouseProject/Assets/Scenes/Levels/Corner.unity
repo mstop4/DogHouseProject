@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -958,6 +958,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b40020696583430f96a06eb60821395, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &797716099 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114100067992910932, guid: 4b40020696583430f96a06eb60821395,
+    type: 2}
+  m_PrefabInternal: {fileID: 797716098}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &846756410
 GameObject:
   m_ObjectHideFlags: 0
@@ -1594,6 +1600,11 @@ Prefab:
       propertyPath: MasterIsHomeEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 114375932848754318, guid: 37349879d3d67a34299d0f89f9c5f8a6,
+        type: 2}
+      propertyPath: goodBoyLabel
+      value: 
+      objectReference: {fileID: 797716099}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37349879d3d67a34299d0f89f9c5f8a6, type: 2}
   m_IsPrefabAsset: 0
