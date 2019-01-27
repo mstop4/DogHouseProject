@@ -35,6 +35,9 @@ public class InverseKinematics : MonoBehaviour {
 	// Update is called once per frame
 	void LateUpdate () {
 		if(upperArm != null && forearm != null && hand != null && elbow != null && target != null){
+            if (Vector3.Distance(target.position, upperArm.position) < 0.5f)
+                return;
+
 			upperArm.LookAt (target, elbow.position - upperArm.position);
 			upperArm.Rotate (uppperArm_OffsetRotation);
 
@@ -48,8 +51,9 @@ public class InverseKinematics : MonoBehaviour {
 			targetDistance = Vector3.Distance (upperArm.position, target.position);
 			targetDistance = Mathf.Min (targetDistance, arm_Length - arm_Length * 0.001f);
 
-			adyacent = ((upperArm_Length * upperArm_Length) - (forearm_Length * forearm_Length) + (targetDistance * targetDistance)) / (2*targetDistance);
+            adyacent = ((upperArm_Length * upperArm_Length) - (forearm_Length * forearm_Length) + (targetDistance * targetDistance)) / (2*targetDistance);
 
+            
 			angle = Mathf.Acos (adyacent / upperArm_Length) * Mathf.Rad2Deg;
 
 			upperArm.RotateAround (upperArm.position, cross, -angle);

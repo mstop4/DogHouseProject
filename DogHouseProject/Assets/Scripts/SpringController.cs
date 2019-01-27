@@ -18,6 +18,8 @@ public class SpringController : MonoBehaviour {
         if (Input.GetKey(key))
         {
             Vector3 directionToMove = anchor.transform.position - transform.position;
+            //float distance = Vector3.Distance(transform.position, anchor.transform.position);
+            //if(distance > 0.7f)
             transform.position = transform.position + directionToMove * speed;
         }
 
