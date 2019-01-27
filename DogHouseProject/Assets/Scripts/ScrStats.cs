@@ -15,6 +15,8 @@ public class ScrStats : MonoBehaviour {
 	public Text timerLabel;
 	public Text loveLabel;
 
+    public Text goodBoyLabel;
+
 	public GameObject goalObj;
 	
     public UnityEvent MasterIsHomeEvent;
@@ -35,6 +37,7 @@ public class ScrStats : MonoBehaviour {
 
 		loveText.gameObject.SetActive(false);
 		loveLabel.gameObject.SetActive(false);
+        goodBoyLabel.gameObject.SetActive(false);
 
         levelOver = false;
         masterDoneAnim = false;
@@ -92,6 +95,7 @@ public class ScrStats : MonoBehaviour {
                 {
                     print("Goto next level in 2 sec");
                     levelOver = true;
+                    goodBoyLabel.gameObject.SetActive(true);
                     Invoke("GotoNextLevel", 2f);
                 }
             }
