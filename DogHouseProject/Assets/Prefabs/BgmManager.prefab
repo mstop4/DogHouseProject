@@ -22,8 +22,8 @@ GameObject:
   - component: {fileID: 114536675461997120}
   - component: {fileID: 82826615276919560}
   m_Layer: 0
-  m_Name: BGM
-  m_TagString: Untagged
+  m_Name: BgmManager
+  m_TagString: BgmManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
